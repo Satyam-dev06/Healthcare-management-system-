@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "healthcare_management_system_backend": {
+      "main": "src/healthcare_management_system_backend/main.mo",
+      "type": "motoko"
+    },
+    "healthcare_management_system_frontend": {
+      "dependencies": [
+        "healthcare_management_system_backend"
+      ],
+      "source": [
+        "src/healthcare_management_system_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "healthcare_management_system_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
