@@ -1,17 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
-  <base href="/" />
-  <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Healthcare Management System</title>
+    <link rel="stylesheet" href="./src/index.css">
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <header class="header">
+        <div class="logo">
+            <h1 id="site-title">Blockchain Healthcare</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#patient-records" class="nav-link">Patient Records</a></li>
+                <li class="nav-item"><a href="#appointments" class="nav-link">Appointments</a></li>
+                <li class="nav-item"><a href="#prescriptions" class="nav-link">Prescriptions</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <section id="patient-records" class="patient-records-section">
+            <h2 class="section-title">Patient Records</h2>
+            <div class="patient-info">
+                <p><strong>Patient Name:</strong> John Doe</p>
+                <p><strong>Patient ID:</strong> 123456</p>
+                <p><strong>Date of Birth:</strong> 1990-01-01</p>
+            </div>
+            <div class="medical-history">
+                <h3>Medical History</h3>
+                <ul>
+                    <li><strong>2023-01-01:</strong> Flu</li>
+                    <li><strong>2022-12-15:</strong> Allergic Reaction</li>
+                    <!-- More medical history items will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="appointments" class="appointments-section">
+            <h2 class="section-title">Appointments</h2>
+            <form id="appointment-form" class="appointment-form">
+                <div class="form-group">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" id="date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="time" id="time" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason" class="form-label">Reason for Visit</label>
+                    <input type="text" id="reason" class="form-input" required>
+                </div>
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="prescriptions" class="prescriptions-section">
+            <h2 class="section-title">Prescriptions</h2>
+            <div class="prescription-list">
+                <div class="prescription-item">
+                    <p><strong>Medication:</strong> Amoxicillin</p>
+                    <p><strong>Dosage:</strong> 500 mg</p>
+                    <p><strong>Frequency:</strong> Twice a day</p>
+                </div>
+                <div class="prescription-item">
+                    <p><strong>Medication:</strong> Ibuprofen</p>
+                    <p><strong>Dosage:</strong> 400 mg</p>
+                    <p><strong>Frequency:</strong> As needed</p>
+                </div>
+                <!-- More prescription items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-input" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Blockchain Healthcare. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="./src/script.js"></script>
+</body>
 </html>
